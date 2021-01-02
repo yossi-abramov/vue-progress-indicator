@@ -1,0 +1,81 @@
+// SCSS variables
+
+$header-height: 60px;
+$progress-indicator-height: 5px;
+$vue-green: #42b983;
+
+// A tiny CSS Reset
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2{
+  margin-bottom: 15px;
+}
+
+p{
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+// Main styles
+#app {
+    padding: 15px;
+    max-width: 900px;
+    margin: auto;
+    margin-top: calc(#{$header-height} + #{$progress-indicator-height} + 15px);
+    color: #2c3e50;
+}
+
+#nav {
+  height: $header-height;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+    margin-right: 10px;
+    &.router-link-exact-active {
+      color: $vue-green;
+    }
+  }
+}
+
+.demo-heading{
+  font-size: 22px;
+  font-weight: bold;
+  margin: 15px 0;
+  span{
+    color: $vue-green;
+  }
+}
+
+// Progress Indicator 
+.progress-indicator-wrapper{
+    position: fixed;
+    height: $progress-indicator-height;
+    background-color: #eee;
+    width: 100%;
+    top: calc(#{$header-height});
+    .progress-indicator{
+        position: absolute;
+        height: $progress-indicator-height;
+        background: $vue-green;
+    }
+}
