@@ -72,9 +72,8 @@ p{
     height: $progress-indicator-height;
     background-color: #eee;
     width: 100%;
-    top: calc(#{$header-height});
+    top: $header-height;
     .progress-indicator{
-        position: absolute;
         height: $progress-indicator-height;
         background: $vue-green;
     }
